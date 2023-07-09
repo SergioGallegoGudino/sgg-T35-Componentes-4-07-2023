@@ -1,0 +1,15 @@
+<h2>Lista de tareas</h2>
+<table class="table">
+    <div>
+        <!-- Creamos una lista, donde cada itineración será una tarea de la array -->
+        <tr *ngFor="let tarea of tareas" id={{tarea.id}}>
+            <td>{{tarea.nombre}}</td>
+            <td>{{tarea.descripcion}}</td>
+            <!-- Creamos una checkbox la cual hará que la fila se vuelva verde, indicando que se ha completado la tarea -->
+            <td><input (click)="marcar(tarea)" class="completado" type="checkbox" aria-label="Checkbox for following text input"></td>
+            <!-- Creamos un botón que elimine este objeto -->
+            <td><button class="btn btn-primary" name="eliminar" (click)="eliminar(tarea.id)">Eliminar</button></td>
+        </tr>
+        <hr>
+    </div>
+</table>

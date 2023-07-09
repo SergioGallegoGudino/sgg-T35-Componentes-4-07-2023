@@ -1,0 +1,18 @@
+<h2>Formulario de tareas</h2>
+<!-- Creamos un formulario para añadir tareas en la lista de tareas -->
+<form #formulario="ngForm">
+    <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Nombre</label>&nbsp;
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Nombre" id="nombre" name="nombre" ngModel>
+        </div>
+    </div>
+    <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Descripcion</label>&nbsp;
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Descripcion" id="descripcion" name="descripcion" ngModel>
+            <!-- Creamos un botón para agregar la tarea, pasando la información del formulario -->
+            <button (click)="agregar(formulario.value)" class="btn btn-primary mt-3">Agregar tarea</button>
+        </div>
+    </div>
+</form>
