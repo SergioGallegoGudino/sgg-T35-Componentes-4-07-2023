@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'componentes-3-sgallego';
+  title = 'componentes-4-sgallego';
   // Creamos una variable tareas en el padre, la cual llamaremos en los hijos
   tareas:any = [];
 
